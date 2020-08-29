@@ -1,0 +1,31 @@
+name: Python & Golang linting
+
+on: ['push', 'pull_request']
+
+jobs:
+    lint:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Clone repo
+              uses: actions/checkout@v2
+            - name: Setup python
+              uses: actions/setup-python@v2
+              with: 
+                python-version: '3.8'
+              id: python
+            - name: Install autopep8
+              run: pip install --upgrade autopep8
+            - name: Perform autopep8
+              run: find . -name '*.py' -exec autopep8 --in-place --aggressive --aggressive '{}' \;
+            - name: Install black
+              run: pip install --upgrade black
+            - name: Perform black
+              run: find . -name '*.py' -exec black '{}' \;
+            - name: Setup Go environment
+              uses: actions/setup-go@v2.1.2
+              with:
+                go-version: 1.15
+                stable: true
+              id: Go
+            - name: Go linting
+              run: go fmt ...
