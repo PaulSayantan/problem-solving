@@ -13,10 +13,10 @@ jobs:
               with: 
                 python-version: '3.8'
               id: python
-            - name: Install autopep8
-              run: pip install --upgrade autopep8
-            - name: Perform autopep8
-              run: find . -name '*.py' -exec autopep8 --in-place --aggressive --aggressive '{}' \;
+            - name: Install flake8
+              run: pip install --upgrade flake8
+            - name: Perform flake8
+              run: find . -name '*.py' -exec flake8 '{}' \;
             - name: Install black
               run: pip install --upgrade black
             - name: Perform black
