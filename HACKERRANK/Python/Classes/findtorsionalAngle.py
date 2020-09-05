@@ -14,7 +14,7 @@ class Points(object):
         return (self.x*no.x) + (self.y*no.y) + (self.z*no.z)
     
     def cross(self, no):
-        return Points((self.y*no.z - self.z*no.y), (self.x*no.z - self.x*no.x),
+        return Points((self.y*no.z - self.z*no.y), (self.x*no.z - self.z*no.x),
                         (self.x*no.y - self.y*no.x))
     
     def absolute(self):
