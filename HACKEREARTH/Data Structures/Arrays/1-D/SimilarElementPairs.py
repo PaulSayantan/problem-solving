@@ -26,7 +26,7 @@ def SimilarElementsPairs(A: List[int],N: int) -> int:
         
     return int(ans)
 
-N = 8
-A = [1, 3, 5, 7, 8, 2, 5, 7]
+N = int(input())
+A = [int(x) for x in input().split()]
 out_ = SimilarElementsPairs(A,N)
 print (out_)
