@@ -40,7 +40,7 @@ def linearSearch(arr: List[int], target: int) -> int:
         # when target is found
         if arr[i] == target:
             # return position of the target
-            return i+1
+            return i
             # declare that target is found
             found = True
             # break out of the loop to ignore unecessary traversing 
