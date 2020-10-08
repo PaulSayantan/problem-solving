@@ -1,4 +1,4 @@
-<h1 align="center">Daily Problem Solving</h1>
+<h1 align="center">Problem Solving & Coding Practice</h1>
 
 <div align="center">
 
